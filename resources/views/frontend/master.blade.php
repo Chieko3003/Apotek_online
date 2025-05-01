@@ -1,0 +1,131 @@
+<!doctype html>
+<html lang="en">
+
+  <head>
+    <title>{{$title}}</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <link href="https://fonts.googleapis.com/css?family=DM+Sans:300,400,700|Indie+Flower" rel="stylesheet">
+    
+
+    <link rel="stylesheet" href="{{asset('frontend/fonts/icomoon/style.css')}}">
+
+    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/bootstrap-datepicker.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/jquery.fancybox.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/owl.theme.default.min.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/fonts/flaticon/font/flaticon.css')}}">
+    <link rel="stylesheet" href="{{asset('frontend/css/aos.css')}}">
+
+    <!-- MAIN CSS -->
+    <link rel="stylesheet" href="{{asset('frontend/css/style.css')}}">
+      
+{{--    @if ($title === 'Home')
+            @yield('sidebar')
+          @yield('slider')
+          @yield('banner')
+          @yield('store')
+          @yield('ourblog')
+        
+      @endif --}}
+      @if ($title === 'Home')
+          @yield('sidebar')
+          @yield('banner')
+          @yield('store')
+          {{-- @yield('ourblog') --}}
+          @yield('happyclient') 
+      @elseif ($title === 'Store')
+          @yield('sidebar')
+          @yield('store')
+          @yield('storeDetail')
+          @yield('happyclient')
+      @elseif ($title === 'happyclient')
+          @yield('happyclient')
+      @endif
+
+
+
+
+    {{--footer--}}
+    <footer class="site-footer">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-4">
+            <h2 class="footer-heading mb-3">About Us</h2>
+                <p class="mb-5">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. </p>
+  
+                <h2 class="footer-heading mb-4">Newsletter</h2>
+                <form action="#" class="d-flex" class="subscribe">
+                  <input type="text" class="form-control mr-3" placeholder="Email">
+                  <input type="submit" value="Send" class="btn btn-primary">
+                </form>
+          </div>
+          <div class="col-lg-8 ml-auto">
+            <div class="row">
+              <div class="col-lg-4 ml-auto">
+                <h2 class="footer-heading mb-4">Navigation</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+              </div>
+              <div class="col-lg-4">
+                <h2 class="footer-heading mb-4">Navigation</h2>
+                <ul class="list-unstyled">
+                  <li><a href="#">About Us</a></li>
+                  <li><a href="#">Testimonials</a></li>
+                  <li><a href="#">Terms of Service</a></li>
+                  <li><a href="#">Privacy</a></li>
+                  <li><a href="#">Contact Us</a></li>
+                </ul>
+                
+              </div>
+  
+              
+              
+            </div>
+          </div>
+        </div>
+        <div class="row pt-5 mt-5 text-center">
+          <div class="col-md-12">
+            <div class="border-top pt-5">
+              <p>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank" >Colorlib</a>
+            <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+            </p>
+            </div>
+          </div>
+  
+        </div>
+      </div>
+    </footer>
+  
+    </div>
+    {{-- @yield('store') --}}
+
+    <script src="{{asset('frontend/js/jquery-3.3.1.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery-migrate-3.0.0.js')}}"></script>
+    <script src="{{asset('frontend/js/popper.min.js')}}"></script>
+    <script src="{{asset('frontend/js/bootstrap.min.js')}}"></script>
+    <script src="{{asset('frontend/js/owl.carousel.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.sticky.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.waypoints.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.animateNumber.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.fancybox.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.stellar.min.js')}}"></script>
+    <script src="{{asset('frontend/js/jquery.easing.1.3.js')}}"></script>
+    <script src="{{asset('frontend/js/bootstrap-datepicker.min.js')}}"></script>
+    <script src="{{asset('frontend/js/aos.js')}}"></script>
+
+    <script src="{{asset('frontend/js/main.js')}}"></script>
+
+  </body>
+
+</html>
+

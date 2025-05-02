@@ -15,7 +15,7 @@ return new class extends Migration
             $table->id();
             $table->string('nama_pelanggan', 255) ->nullable(false);
             $table->string('email', 255)->unique()->nullable(false);
-            $table->string('kata_kunci', 15) ->nullable(false);
+            $table->string('kata_kunci', 100) ->nullable(false);
             $table->string('no_telp', 15) ->nullable(false);
             $table->string('alamat1', 255) ->nullable(false);
             $table->string('kota1', 255) ->nullable(false);

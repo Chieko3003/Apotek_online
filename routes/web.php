@@ -14,6 +14,9 @@ use App\Http\Controllers\JabatanController;
 use App\Http\Controllers\ObatController;
 use App\Http\Controllers\StoreController;
 use App\Http\Controllers\NewAuthController;
+use App\Http\Controllers\PelangganAuthController;
+// use App\Http\Controllers\KeranjangController;
+
 
 
 
@@ -27,7 +30,8 @@ Route::get('/detailpembelian', [DetailPembelianController::class, 'index'])->nam
 Route::get('/', [HomeController::class, 'index'])->name('home');
 */
 
-Route::get('/homelogin', [HomeLoginController::class, 'index'])->name('homelogin');
+Route::get('/homelogin', [HomeLoginController::class, 'index'])->name('homelogin.index');
+Route::get('/storelogin', [StoreLoginController::class, 'index'])->name('storelogin.index');
 
 // Auth - Login
 Route::get('/login', [AuthController::class, 'Login'])->name('login');
@@ -45,13 +49,14 @@ Route::get('/storedetail', [StoreDetailController::class, 'show'])->name('StoreD
 // Route::get('/dashboard', [DashboardController::class, 'showDashboard'])->name('dashboard');
 // Route::get('/admin', [AdminController::class, 'dashboard'])->name('admin.dashboard');
 // Route::get('/register', [NewAuthController::class, 'newshowRegistrationForm'])->name('newregister');
-Route::get('/register', [NewAuthController::class, 'newshowRegistrationForm'])->name('newregister');
-Route::post('/register/submit', [NewAuthController::class, 'newsubmitRegistration'])->name('newregister.submit');
-Route::post('/newlogout', [NewAuthController::class, 'newlogout'])->name('newlogout');
-Route::get('/newlogin', [NewAuthController::class, 'newshowLogin'])->name('newlogin.show');
-Route::post('/newlogin/submit', [NewAuthController::class, 'newsubmitLogin'])->name('newlogin.submit');
+Route::get('/register', [PelangganAuthController ::class, 'showRegisterform'])->name('newregister');
+Route::post('/register/submit', [PelangganAuthController ::class, 'newRegister'])->name('newregister.submit');
+Route::post('/newlogout', [PelangganAuthController::class, 'newlogout'])->name('newlogout');
+Route::get('/newlogin', [PelangganAuthController::class, 'newshowLogin'])->name('newlogin.show');
+Route::post('/newlogin/submit', [PelangganAuthController::class, 'newsubmitLogin'])->name('newlogin.submit');
 Route::get('/', [PembelianController::class, 'index']);
 Route::resource('pembelian', PembelianController::class);
+// Route::resource('keranjang', KeranjangController::class);
 Route::resource('distributor', DistributorController::class);
 Route::resource('obat', ObatController::class);
 Route::resource('jenisobat', JenisObatController::class);

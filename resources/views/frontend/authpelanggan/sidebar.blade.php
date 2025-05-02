@@ -90,13 +90,9 @@
         <div class="container">
           <div class="row align-items-center ">
             <div class="col-md-5 mt-5 pt-5">
-              {{-- <span class="text-cursive h5 text-red">Welcome To Our Website</span> --}}
+              <span class="text-cursive h5 text-red">Welcome To Our Website</span>
               <span class="text-cursive h5 text-red">
-                @auth
-                  Welcome To Our Website {{ Auth::user()->name }}
-                @else
-                  Welcome To Our Website
-                @endauth
+            
               </span>
               <h1 class="mb-3 font-weight-bold text-teal">APOTEK CERIA</h1>
               <p>Keluarga sehat hari haripun ceria</p>

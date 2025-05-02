@@ -51,6 +51,7 @@ class NewAuthController extends Controller
         }
     }
 
+
     public function newshowRegistrationForm()
     {
         return view('frontend.authpelanggan.newauth.register'); // pastikan view ini ada juga ya
@@ -65,8 +66,8 @@ class NewAuthController extends Controller
         return redirect()->route('newlogin.show')->with('success', 'Logout berhasil!');
     }
 
-    // public function newshowLoginForm()
-    // {
-    //     return view('frontend.authpelanggan.newauth.login'); // pastikan view ini ada juga ya
-    // }
+    public function newshowLoginForm()
+    {
+        return view('frontend.authpelanggan.newauth.login'); // pastikan view ini ada juga ya
+    }
 }

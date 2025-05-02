@@ -3,15 +3,17 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Models\Pelanggan;
 
 class PelangganAuthController extends Controller
 {
+
     public function showRegisterform()
     {
-        return view('frontend.newauth.register');
+        return view('frontend.authpelanggan.newauth.register');
     }
 
-    public function newshowLogin(Request $request)
+    public function newRegister(Request $request)
     {
         $request->validate([
             'nama_pelanggan' => 'required',
@@ -36,6 +38,30 @@ class PelangganAuthController extends Controller
         ]);
          return redirect()->route('newlogin.show')->with('success', 'Registrasi berhasil!');
     }
+
+    public function newshowLogin()
+    {
+        return view('frontend.authpelanggan.newauth.login');
+    }
+
+
+    public function newsubmitLogin(Request $request)
+    {
+        $request->validate([
+            'nama_pelanggan' => 'required',
+            'email' => 'required|',
+            'kata_kunci' => 'required|max:35'
+        ]);
+
+        // dd($request->all());
+        $pelanggan = Pelanggan::where('nama_pelanggan',$request->nama_pelanggan)->orWhere('email',$request->email)->orWhere('kata_kunci',$request->kata_kunci)->first();
+        if ($pelanggan) {
+            return redirect()->route('homelogin.index')->with('success', 'Login berhasil!');
+        }
+
+        return redirect()->back()->withErrors(['email' => 'Email atau kata kunci salah.']);
+    }
+    
     public function logout(Request $request)
     {
         auth()->logout();

@@ -72,13 +72,28 @@
             {{-- This is important for security to prevent CSRF attacks --}}
             @csrf
             <label>Nama Lengkap</label>
-            <input type="text" name="name" class="form-control mb-2">
+            <input type="text" name="nama_pelanggan" class="form-control mb-2">
 
             <label>Email Address</label>
             <input type="text" name="email" class="form-control mb-2">
 
             <label>Password</label>
-            <input type="password" name="password" class="form-control mb-2">
+            <input type="password" name="kata_kunci" class="form-control mb-2">
+
+            <label>No telp</label>
+            <input type="text" name="no_telp" class="form-control mb-2">
+
+            <label>alamat</label>
+            <input type="text" name="alamat1" class="form-control mb-2">
+
+            <label>kota</label>
+            <input type="text" name="kota1" class="form-control mb-2">
+
+            <label>provinsi</label>
+            <input type="text" name="propinsi1" class="form-control mb-2">
+
+            <label>kodepos</label>
+            <input type="text" name="kodepos1" class="form-control mb-2">
             {{-- <input type="password" name="password_confirmation" placeholder="Konfirmasi Password" required> --}}
             <button class="btn btn-primary">Submit Registrasi</button>
         </form>

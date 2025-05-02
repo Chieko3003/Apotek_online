@@ -56,19 +56,15 @@
         <h2>Login Apotek Ceria</h2>
         <p>Silahkan masuk menggunakan akun yang sudah kamu buat</p>
         <form action="{{ route('newlogin.submit') }}" method="POST">
-            {{-- CSRF token for security --}}
-            {{-- Laravel automatically generates a CSRF token for each session --}}
-            {{-- This token is used to verify that the authenticated user is the one making the request --}}
-            {{-- This is important for security to prevent CSRF attacks --}}
             @csrf
-            {{-- <label>Nama yang sudah didaftarkan</label>
-            <input type="text" name="name" class="form-control mb-2"> --}}
+            <label>Nama yang sudah didaftarkan</label>
+            <input type="text" name="nama_pelanggan" class="form-control mb-2">
 
             <label>Email Address</label>
             <input type="text" name="email" class="form-control mb-2">
 
             <label>Password</label>
-            <input type="password" name="password" class="form-control mb-2">
+            <input type="password" name="kata_kunci" class="form-control mb-2">
             {{-- <input type="password" name="password_confirmation" placeholder="Konfirmasi Password" required> --}}
             <button class="btn btn-primary">Submit login</button>
         </form>
